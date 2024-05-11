@@ -1,0 +1,9 @@
+{
+    "condition": "minecraft:entity_scores",
+    "entity": "attacker",
+    "scores": {
+        "armor": {
+            "min": 8
+        }
+    }
+}

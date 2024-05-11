@@ -1,0 +1,74 @@
+{
+    "anvil_cost": 8,
+    "description": {
+        "text": "Call Lightning"
+    },
+    "effects": {
+        "minecraft:post_attack": [
+            {
+                "affected": "victim",
+                "effect": {
+                    "type": "minecraft:all_of",
+                    "effects": [
+                        {
+                            "type": "minecraft:summon_entity",
+                            "entity": "minecraft:lightning_bolt"
+                        },
+                        {
+                            "type": "minecraft:play_sound",
+                            "pitch": 1.0,
+                            "sound": "minecraft:item.trident.thunder",
+                            "volume": 5.0
+                        }
+                    ]
+                },
+                "enchanted": "attacker",
+                "requirements": {
+                    "condition": "minecraft:all_of",
+                    "terms": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "location": {
+                                    "can_see_sky": true
+                                }
+                            }
+                        },
+                        {
+                            "condition": "minecraft:entity_scores",
+                            "entity": "attacker",
+                            "scores": {
+                                "armor": {
+                                    "max": {
+                                        "type": "minecraft:enchantment_level",
+                                        "amount": {
+                                            "type": "minecraft:linear",
+                                            "base": 1,
+                                            "per_level_above_first": 1
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "max_cost": {
+        "base": 80,
+        "per_level_above_first": 20
+    },
+    "max_level": 3,
+    "min_cost": {
+        "base": 20,
+        "per_level_above_first": 20
+    },
+    "primary_items": "#empathymp3:enchantable/call_lightning",
+    "slots": [
+        "mainhand"
+    ],
+    "supported_items": "#empathymp3:enchantable/call_lightning",
+    "weight": 1
+}

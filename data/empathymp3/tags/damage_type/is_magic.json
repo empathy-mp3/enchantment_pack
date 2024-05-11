@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:magic",
+    "minecraft:indirect_magic",
+    "minecraft:wither",
+    "minecraft:lightning_bolt",
+    "minecraft:freeze",
+    "minecraft:thorns"
+  ]
+}

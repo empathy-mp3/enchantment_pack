@@ -1,0 +1,13 @@
+{
+    "values": [
+        "minecraft:book",
+        "minecraft:enchanting_table",
+        "minecraft:enchanted_book",
+        "minecraft:paper",
+        "minecraft:anvil",
+        "minecraft:chipped_anvil",
+        "minecraft:damaged_anvil",
+        "#empathymp3:advancement/enchantments/weapon",
+        "#empathymp3:advancement/enchantments/armor"
+    ]
+}

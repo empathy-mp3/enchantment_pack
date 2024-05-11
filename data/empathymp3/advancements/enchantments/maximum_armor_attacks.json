@@ -1,0 +1,62 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:iron_nugget"
+        },
+        "title": "Maximum Armor Attacks",
+        "description": "These enchantments have an effect that triggers only if you are below an amount of armor. One weapon cannot have multiple.",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "empathymp3:enchantments/weapon",
+    "criteria": {
+        "call_lightning": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:call_lightning",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 3
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "call_lightning_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:call_lightning",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 3
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "call_lightning",
+            "call_lightning_book"
+        ]
+    ],
+    "sends_telemetry_event": false
+}

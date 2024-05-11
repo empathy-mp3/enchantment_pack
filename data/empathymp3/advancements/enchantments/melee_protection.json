@@ -1,0 +1,62 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:stone_axe"
+        },
+        "title": "Melee Protection (I-IV)",
+        "description": "Valid Items: Chestplates, Boots. Resists melee damage, and pricks from plants.",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "empathymp3:enchantments/protection",
+    "criteria": {
+        "melee_protection": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:melee_protection",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "melee_protection_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:melee_protection",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "melee_protection",
+            "melee_protection_book"
+        ]
+    ],
+    "sends_telemetry_event": false
+}

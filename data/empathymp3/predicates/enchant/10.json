@@ -1,0 +1,12 @@
+{
+    "condition": "minecraft:value_check",
+    "value": {
+        "type": "minecraft:enchantment_level",
+        "amount": {
+            "type": "minecraft:linear",
+            "base": 1,
+            "per_level_above_first": 1
+        }
+    },
+    "range": 10
+}

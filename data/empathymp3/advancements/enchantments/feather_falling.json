@@ -1,0 +1,62 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:feather"
+        },
+        "title": "Feather Falling (I-IV)",
+        "description": "Valid Items: Leggings, Boots. Resists damage from falling.",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "empathymp3:enchantments/protection",
+    "criteria": {
+        "feather_falling": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:feather_falling",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "feather_falling_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:feather_falling",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "feather_falling",
+            "feather_falling_book"
+        ]
+    ],
+    "sends_telemetry_event": false
+}

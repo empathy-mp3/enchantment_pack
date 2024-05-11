@@ -1,0 +1,62 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:echo_shard"
+        },
+        "title": "Sneak Attacks",
+        "description": "These enchantments have an effect that triggers when attacking while sneaking. One weapon cannot have multiple.",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "empathymp3:enchantments/weapon",
+    "criteria": {
+        "berserk": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:explosive_shot",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "berserk_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:explosive_shot",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "berserk",
+            "berserk_book"
+        ]
+    ],
+    "sends_telemetry_event": false
+}

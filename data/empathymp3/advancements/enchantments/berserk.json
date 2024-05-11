@@ -1,0 +1,62 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:redstone"
+        },
+        "title": "Berserk (I-III)",
+        "description": "Valid Items: Axes. Attacks while in midair that do not crit will cost [1/1.5/2] hearts, and give Strength, Speed II, and 1 extra block of attack range to up to 3 nearby targets (including oneself), for [10/15/20] seconds.",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "empathymp3:enchantments/non_critting_air_attacks",
+    "criteria": {
+        "berserk": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:berserk",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 3
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "berserk_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:berserk",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 3
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "berserk",
+            "berserk_book"
+        ]
+    ],
+    "sends_telemetry_event": false
+}

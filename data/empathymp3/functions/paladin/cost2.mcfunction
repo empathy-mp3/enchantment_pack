@@ -1,0 +1,1 @@
+execute if score @s armor matches 2.. run function empathymp3:paladin/2

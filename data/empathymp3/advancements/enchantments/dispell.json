@@ -1,0 +1,62 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:blaze_spawn_egg"
+        },
+        "title": "Dispell (I-III)",
+        "description": "Valid Items: Swords, Crossbow, Axes, Mace. Deals additional damage to magical beings, such as blazes, slimes, vexes, guardians, creepers, ghasts, wardens, and similar creatures. It is also stronger against those who use magic.",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "empathymp3:enchantments/enemy_type",
+    "criteria": {
+        "dispell": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:dispell",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 3
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "dispell_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:dispell",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 3
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "dispell",
+            "dispell_book"
+        ]
+    ],
+    "sends_telemetry_event": false
+}

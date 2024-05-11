@@ -1,0 +1,103 @@
+{
+    "anvil_cost": 8,
+    "description": {
+        "text": "Berserk"
+    },
+    "effects": {
+        "minecraft:post_attack": [
+            {
+                "enchanted": "attacker",
+                "affected": "attacker",
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "empathymp3:spells/berserk/1"
+                },
+                "requirements": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "attacker",
+                        "predicate": {
+                            "movement": {
+                                "fall_distance": 0
+                            },
+                            "flags": {
+                                "is_on_ground": false
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "empathymp3:enchant/1"
+                    }
+                ]
+            },
+            {
+                "enchanted": "attacker",
+                "affected": "attacker",
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "empathymp3:spells/berserk/2"
+                },
+                "requirements": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "attacker",
+                        "predicate": {
+                            "movement": {
+                                "fall_distance": 0
+                            },
+                            "flags": {
+                                "is_on_ground": false
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "empathymp3:enchant/2"
+                    }
+                ]
+            },
+            {
+                "enchanted": "attacker",
+                "affected": "attacker",
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "empathymp3:spells/berserk/3"
+                },
+                "requirements": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "attacker",
+                        "predicate": {
+                            "movement": {
+                                "fall_distance": 0
+                            },
+                            "flags": {
+                                "is_on_ground": false
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "empathymp3:enchant/3"
+                    }
+                ]
+            }
+        ]
+    },
+    "max_cost": {
+        "base": 80,
+        "per_level_above_first": 20
+    },
+    "max_level": 3,
+    "min_cost": {
+        "base": 20,
+        "per_level_above_first": 20
+    },
+    "primary_items": "#empathymp3:enchantable/berserk",
+    "slots": [
+        "mainhand"
+    ],
+    "supported_items": "#empathymp3:enchantable/berserk",
+    "weight": 1
+}

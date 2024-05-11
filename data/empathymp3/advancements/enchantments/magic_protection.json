@@ -1,0 +1,67 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:potion",
+            "components": {
+                "minecraft:potion_contents": {
+                    "custom_color": 65280
+                }
+            }
+        },
+        "title": "Magic Protection (I-IV)",
+        "description": "Valid Items: Helmets, Leggings. Resists damage from magical sources, like effects, potions, lightning, freezing, and the thorns enchantment.",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "empathymp3:enchantments/protection",
+    "criteria": {
+        "magic_protection": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:magic_protection",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "magic_protection_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:magic_protection",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "magic_protection",
+            "magic_protection_book"
+        ]
+    ],
+    "sends_telemetry_event": false
+}

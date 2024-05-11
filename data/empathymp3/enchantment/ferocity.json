@@ -1,0 +1,41 @@
+{
+    "anvil_cost": 8,
+    "description": {
+        "text": "Ferocity"
+    },
+    "effects": {
+        "minecraft:post_attack": [
+            {
+                "affected": "victim",
+                "effect": {
+                    "type": "run_function",
+                    "function": "empathymp3:spells/ferocity/tag"
+                },
+                "enchanted": "attacker"
+            },
+            {
+                "affected": "attacker",
+                "effect": {
+                    "type": "run_function",
+                    "function": "empathymp3:spells/ferocity/schedule"
+                },
+                "enchanted": "attacker"
+            }
+        ]
+    },
+    "max_cost": {
+        "base": 80,
+        "per_level_above_first": 20
+    },
+    "max_level": 1,
+    "min_cost": {
+        "base": 20,
+        "per_level_above_first": 20
+    },
+    "primary_items": "#empathymp3:enchantable/ferocity",
+    "slots": [
+        "mainhand"
+    ],
+    "supported_items": "#empathymp3:enchantable/ferocity",
+    "weight": 1
+}

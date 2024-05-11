@@ -1,0 +1,237 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:golden_chestplate",
+            "components": {
+                "minecraft:trim": {
+                    "material": "minecraft:netherite",
+                    "pattern": "minecraft:ward",
+                    "show_in_tooltip": false
+                }
+            }
+        },
+        "title": "Protection Enchantments",
+        "description": "These enchantments reduce certain kinds of damage. One armor piece cannot have multiple. These sorts of enchantments are weaker than usual.",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "empathymp3:enchantments/armor",
+    "criteria": {
+        "projectile_protection": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:projectile_protection",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "projectile_protection_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:projectile_protection",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "magic_protection": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:magic_protection",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "magic_protection_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:magic_protection",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "fire_protection": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:fire_protection",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "fire_protection_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:fire_protection",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "feather_falling": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:feather_falling",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "feather_falling_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:feather_falling",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "blast_protection": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:projectile_protection",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "blast_protection_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:projectile_protection",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "projectile_protection",
+            "projectile_protection_book",
+            "magic_protection",
+            "magic_protection_book",
+            "fire_protection",
+            "fire_protection_book",
+            "feather_falling",
+            "feather_falling_book",
+            "blast_protection",
+            "blast_protection_book"
+        ]
+    ],
+    "sends_telemetry_event": false
+}

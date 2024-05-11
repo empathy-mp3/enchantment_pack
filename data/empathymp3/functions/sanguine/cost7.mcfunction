@@ -1,0 +1,1 @@
+damage @s 7 out_of_world

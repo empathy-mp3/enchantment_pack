@@ -1,0 +1,62 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:bolt_armor_trim_smithing_template"
+        },
+        "title": "Call Lightning (I-III)",
+        "description": "Valid Items: Mace. Attacks exposed to the sky while you have a minimum of [1/2/3] armor will strike your foes with lightning.",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "empathymp3:enchantments/maximum_armor_attacks",
+    "criteria": {
+        "call_lightning": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:enchantments": [
+                                {
+                                    "enchantments": "empathymp3:call_lightning",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 3
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "call_lightning_book": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "predicates": {
+                            "minecraft:stored_enchantments": [
+                                {
+                                    "enchantments": "empathymp3:call_lightning",
+                                    "levels": {
+                                        "min": 1,
+                                        "max": 3
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "call_lightning",
+            "call_lightning_book"
+        ]
+    ],
+    "sends_telemetry_event": false
+}
